@@ -77,5 +77,16 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AidanTran/tasks/issues"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+        "testing-library/prefer-presence-queries": "off",
+        "jest/no-conditional-expect": "off",
+        "testing-library/no-render-in-setup": "off"
+    }
   }
 }
