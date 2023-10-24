@@ -48,7 +48,7 @@ export const QuestionEdit = ({
         b(0);
         editQuestion(question.id, {
             ...question,
-            type: "multiple_choice_question",
+            type: question.type === "multiple_choice_question" ? "multiple_choice_question" : "short_answer_question",
             expected: "Example Answer",
             options: Array(3).fill("Example Answer")
         });
@@ -134,7 +134,7 @@ export const QuestionEdit = ({
                                         data-testid={
                                             "question_type_dropdown_" + index
                                         }
-                                        value="multiple_choice_question"
+                                        value= "multiple_choice_question"
                                     >
                                         Multiple Choice
                                     </option>
