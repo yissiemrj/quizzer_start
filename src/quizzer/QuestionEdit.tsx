@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Question, QuestionType } from "../interfaces/question";
+import { Question} from "../interfaces/question";
 
 import "./QuestionEdit.css";
 import { Button, Form } from "react-bootstrap";
@@ -45,7 +45,6 @@ export const QuestionEdit = ({
     */
 
     const switchMulti = () => {
-        b(0);
         editQuestion(question.id, {
             ...question,
             type: question.type === "multiple_choice_question" ? "multiple_choice_question" : "short_answer_question",
@@ -128,7 +127,7 @@ export const QuestionEdit = ({
                                 <Form.Select
                                     className="type_dropdown"
                                     value={question.type}
-                                    onChange= {()=> switchMulti }
+                                    onChange= {switchMulti}
                                 >
                                     <option
                                         data-testid={
