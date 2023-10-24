@@ -5,13 +5,20 @@ import { Quiz } from "../interfaces/quiz";
 
 import "./QuizExpanded.css";
 import { QuizQuestion } from "./QuizQuestion";
+import { QuestionEdit } from "./QuestionEdit";
 
 export const QuizExpanded = ({
     quiz,
     editQuiz,
     resetView,
     switchEdit
-}: {}) => {
+}: {
+    quiz: Quiz;
+    //not sure if it's type Quiz or Question[]
+    editQuiz: (id: number, quiz: Quiz) => void;
+    resetView: () => void;
+    switchEdit: () => void;
+}) => {
     const filteredQuestions = quiz.questionList.filter(
         (q: Question): boolean =>
             (quiz.published && q.published) || !quiz.published
@@ -24,12 +31,13 @@ export const QuizExpanded = ({
 
     const handleQuestionSubmit = (index: number) => {
         const newSubmitArr = [...submitArr];
+        //newSubmitArr[index] = true; 
         newSubmitArr.splice(index, 3, true);
         setSubmitArr(newSubmitArr);
     };
 
     const totalPoints = filteredQuestions.reduce(
-        (prev: number, q: Question): number => prev + q.p,
+        (prev: number, q: Question): number => prev + q.points,
         0
     );
 
@@ -50,10 +58,18 @@ export const QuizExpanded = ({
     };
 
     const editQuestionSub = (questionId: number, sub: string) => {
-        editQuiz(quiz.id, {
+        /*editQuiz(quiz.id, {
             ...quiz,
             questionList: quiz.questionList.map(
             )
+        }); */
+        const newUpdate = quiz.questionList.map((q: Question) =>
+            (q.id === questionId) ? 
+            {...q, submission: sub}: q
+        );
+
+        editQuiz(quiz.id, {
+            ...quiz, questionList: newUpdate,
         });
     };
 
@@ -92,7 +108,7 @@ export const QuizExpanded = ({
                 <QuizQuestion
                     key={quiz.id + "|" + q.id}
                     index={index}
-                    question="q"
+                    question= {q}
                     submitted={submitArr[index]}
                     handleSubmit={handleQuestionSubmit}
                     addPoints={addPoints}
