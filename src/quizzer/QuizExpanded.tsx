@@ -5,7 +5,7 @@ import { Quiz } from "../interfaces/quiz";
 
 import "./QuizExpanded.css";
 import { QuizQuestion } from "./QuizQuestion";
-//import { QuestionEdit } from "./QuestionEdit";
+//import { QuestionEdit } from "./QuestionEdit"; //not sure if we should add this or not
 
 export const QuizExpanded = ({
     quiz,
