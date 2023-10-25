@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Question} from "../interfaces/question";
+import { Question, QuestionType} from "../interfaces/question";
 
 import "./QuestionEdit.css";
 import { Button, Form } from "react-bootstrap";
@@ -37,19 +37,32 @@ export const QuestionEdit = ({
     };
 
     //START HERE -----------------------------------------------------------------------------------------
-    /*
-    function handleSwitch(e: React.ChangeEvent<HTMLInputElement>): void {
-        //pass a question and event
-        //return ..q, e.target.value
-        editQuestion(q.id, {.type: e.target.value === "multiple_choice_question" ? "multiple_choice_question" : "short_answer_question" });
+    
+    function handleSwitch(e: React.ChangeEvent<HTMLSelectElement>): void {
+        const type: QuestionType = e.target.value === "multiple_choice_question" ? "multiple_choice_question" : "short_answer_question";
+        if(type === "multiple_choice_question" ){
+            switchMulti();
+        } else {
+            switchShort();
+        }
     }
-    //---------------------------------------------------------------------------------------------------- */
+    //---------------------------------------------------------------------------------------------------- 
+    const switchShort = () => {
+        b(0);
+        editQuestion(question.id, {
+            ...question,
+            type: "short_answer_question",
+            expected: "Example Answer",
+            options: Array(3).fill("Example Answer")
+        });
+    };
     
 
     const switchMulti = () => {
+        b(0);
         editQuestion(question.id, {
             ...question,
-            type: question.type === "multiple_choice_question" ? "multiple_choice_question" : "short_answer_question",
+            type: "multiple_choice_question",
             expected: "Example Answer",
             options: Array(3).fill("Example Answer")
         });
@@ -129,7 +142,7 @@ export const QuestionEdit = ({
                                 <Form.Select
                                     className="type_dropdown"
                                     value={question.type}
-                                    onChange= {switchMulti}
+                                    onChange= {handleSwitch}
                                 >
                                     <option
                                         data-testid={
