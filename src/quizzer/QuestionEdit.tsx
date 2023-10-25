@@ -36,13 +36,15 @@ export const QuestionEdit = ({
         });
     };
 
+    //START HERE -----------------------------------------------------------------------------------------
     /*
-    function handleSwitch(q: Question, e: React.ChangeEvent<HTMLInputElement>): void {
+    function handleSwitch(e: React.ChangeEvent<HTMLInputElement>): void {
         //pass a question and event
         //return ..q, e.target.value
-        editQuestion(q.id, {...q, type: e.target.value === "multiple_choice_question" ? "multiple_choice_question" : "short_answer_question" });
+        editQuestion(q.id, {.type: e.target.value === "multiple_choice_question" ? "multiple_choice_question" : "short_answer_question" });
     }
-    */
+    //---------------------------------------------------------------------------------------------------- */
+    
 
     const switchMulti = () => {
         editQuestion(question.id, {

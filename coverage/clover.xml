@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1698164763774" clover="3.2.0">
-  <project timestamp="1698164763774" name="All files">
+<coverage generated="1698205112027" clover="3.2.0">
+  <project timestamp="1698205112027" name="All files">
     <metrics statements="142" coveredstatements="116" conditionals="60" coveredconditionals="49" methods="73" coveredmethods="56" elements="275" coveredelements="221" complexity="0" loc="142" ncloc="142" packages="3" files="12" classes="12"/>
     <package name="src">
       <metrics statements="3" coveredstatements="2" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="1"/>
@@ -48,28 +48,28 @@
         <line num="28" count="0" type="stmt"/>
         <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="31" count="0" type="stmt"/>
-        <line num="47" count="54" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
-        <line num="56" count="54" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="61" count="54" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
+        <line num="49" count="54" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="58" count="54" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="63" count="54" type="stmt"/>
         <line num="67" count="0" type="stmt"/>
-        <line num="74" count="54" type="stmt"/>
-        <line num="75" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="76" count="54" type="stmt"/>
         <line num="77" count="0" type="stmt"/>
-        <line num="83" count="54" type="stmt"/>
-        <line num="100" count="0" type="stmt"/>
-        <line num="173" count="0" type="stmt"/>
-        <line num="186" count="78" type="stmt"/>
-        <line num="207" count="0" type="stmt"/>
-        <line num="225" count="2" type="stmt"/>
-        <line num="234" count="0" type="stmt"/>
-        <line num="250" count="1" type="stmt"/>
-        <line num="259" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="85" count="54" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+        <line num="175" count="0" type="stmt"/>
+        <line num="188" count="78" type="stmt"/>
+        <line num="209" count="0" type="stmt"/>
+        <line num="227" count="2" type="stmt"/>
+        <line num="236" count="0" type="stmt"/>
+        <line num="252" count="1" type="stmt"/>
+        <line num="261" count="0" type="stmt"/>
       </file>
       <file name="QuizCard.tsx" path="C:\Users\Owner\quizzer_start\src\quizzer\QuizCard.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="3"/>
@@ -139,16 +139,16 @@
       </file>
       <file name="QuizList.tsx" path="C:\Users\Owner\quizzer_start\src\quizzer\QuizList.tsx">
         <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="20" count="41" type="stmt"/>
-        <line num="22" count="41" type="stmt"/>
-        <line num="23" count="10" type="stmt"/>
-        <line num="26" count="41" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="30" count="41" type="stmt"/>
-        <line num="35" count="90" type="stmt"/>
-        <line num="47" count="205" type="cond" truecount="2" falsecount="0"/>
-        <line num="48" count="23" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="21" count="41" type="stmt"/>
+        <line num="23" count="41" type="stmt"/>
+        <line num="24" count="10" type="stmt"/>
+        <line num="27" count="41" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="31" count="41" type="stmt"/>
+        <line num="36" count="90" type="stmt"/>
+        <line num="48" count="205" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="23" type="stmt"/>
       </file>
       <file name="QuizQuestion.tsx" path="C:\Users\Owner\quizzer_start\src\quizzer\QuizQuestion.tsx">
         <metrics statements="10" coveredstatements="10" conditionals="14" coveredconditionals="12" methods="4" coveredmethods="4"/>
